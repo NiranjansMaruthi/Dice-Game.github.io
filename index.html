@@ -4,44 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Game</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<link rel="stylesheet" href="./style.css">
 <body>
 
-    <!---navbar for  the  page -->
-<nav>
-    Dice Game
-</nav>
+    <!-- Navbar -->
+    <nav>Dice Game</nav>
 
-<!--Content of the page-->
-<!--Player's content-->
-<div class="content">
-    <!--code for user1-->
-     <div class="user1">
-     <h3>Player - 1</h3>
-      <input  id="Player1" type="text" placeholder="Enter your name"><br>
-      <img src="./image/image1.png" alt="user1">
+    <!-- Players -->
+    <div class="content">
+        <div class="user1">
+            <h3>Player - 1</h3>
+            <input id="Player1" type="text" placeholder="Enter your name" aria-label="Player 1 name">
+            <img src="./image/image1.png" alt="Player 1 dice">
+        </div>
 
+        <h1>Vs</h1>
 
+        <div class="user2">
+            <h3>Player - 2</h3>
+            <input id="Player2" type="text" placeholder="Enter your name" aria-label="Player 2 name">
+            <img src="./image/image2.png" alt="Player 2 dice">
+        </div>
     </div>
 
-    <h1>Vs</h1>
+    <!-- Result sentence -->
+    <h2 id="tag" aria-live="polite"></h2>
 
-    <!-- code for user2-->
-     <div class="user2">
-     <h3>Player - 2</h3>
-     <input id="Player2"  type="text" placeholder="Enter your name"><br>
-     <img src="./image/image2.png" alt="user2--">
+    <!-- Roll button -->
+    <div class="rollbtn">
+        <button onclick="submit()">Press to Spin</button>
     </div>
-</div>
-   <!-- display the result on sentance-->
-    <h2 id="tag"> </h2> 
 
-<!--Roll it button-->
-<div class="rollbtn">
-    <button onclick="submit()">Press to Spin </button>
-</div>
-
-<script src="logic.js"></script> 
+    <script src="logic.js"></script>
 </body>
 </html>
